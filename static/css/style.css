@@ -100,6 +100,57 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+
+
+/* Correção do layout do formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px; /* Evita que os campos estiquem demais em telas grandes */
+    margin-top: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form-group button {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+.form-group button:hover {
+    background-color: #117a65;
+}
+
+.result-box {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #e8f8f5;
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+}
+
+
 /* Responsividade Mobile */
 @media (max-width: 768px) {
     .menu-toggle {
