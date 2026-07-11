@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Industrial - Gestão 360</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    <!-- Header com Logo e Menu Hamburger -->
+    <header class="navbar">
+        <div class="logo">🏭 <span>GestãoIndustrial</span></div>
+        <button class="menu-toggle" aria-label="Abrir Menu" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <!-- Navegação em Cascata (Dropdowns) -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">1. Investimento Inicial ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#terreno">Compra do Terreno</a></li>
+                        <li><a href="#edificacoes">Edificações & Obras</a></li>
+                        <li><a href="#impostos">Impostos Imobiliários</a></li>
+                        <li><a href="#retorno">Retorno (ROI) Acionistas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">2. Ativos & Máquinas ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#maquinas">Preço de Aquisição</a></li>
+                        <li><a href="#manutencao">Manutenção (Tempo/Custo)</a></li>
+                        <li><a href="#depreciacao">Depreciação & Revenda</a></li>
+                        <li><a href="#minuto-maquina">Custo do Minuto-Máquina</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">3. Produção & Vendas ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#materia-prima">Matéria-Prima & Insumos</a></li>
+                        <li><a href="#mao-de-obra">Mão de Obra (MOD)</a></li>
+                        <li><a href="#tabela-vendas">Tabela de Vendas & Mark-up</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <section id="terreno" class="card">
+            <h2>Compra do Terreno & Edificações</h2>
+            <p>Gerencie aqui os custos de aquisição de áreas industriais, terraplanagem, licenças ambientais e construção civil.</p>
+        </section>
+
+        <section id="minuto-maquina" class="card">
+            <h2>Custo do Minuto-Máquina</h2>
+            <p>Cálculo baseado na depreciação, energia consumida, área ocupada e custos de manutenção preventiva.</p>
+        </section>
+
+        <section id="tabela-vendas" class="card">
+            <h2>Simulador de Preço de Venda (Mark-up)</h2>
+            <div class="form-group">
+                <label>Custo Total do Produto (R$):</label>
+                <input type="number" id="custoTotal" value="100">
+                <label>Margem de Lucro Desejada (%):</label>
+                <input type="number" id="lucro" value="20">
+                <label>Impostos sobre a Venda (%):</label>
+                <input type="number" id="impostosInput" value="18">
+                <button onclick="calcularPrecovenda()">Calcular Preço</button>
+            </div>
+            <div id="resultado" class="result-box"></div>
+        </section>
+    </main>
+
+    <script src="../static/js/main.js"></script>
+</body>
+</html>
